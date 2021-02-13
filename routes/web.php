@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('authentication-login');
 });
-Route::get('/index', function () {
-    return view('index');
+Route::get('/cadastro-membros', function () {
+    return view('cadastro-membros');
 });

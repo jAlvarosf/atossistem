@@ -309,89 +309,79 @@
                             <form class="form-horizontal">
                                 <div class="card-body">
                                     <h4 class="card-title">Informações Pessoais</h4>
-                                    <div class="form-group">
-                                        <label for="fname" class="col-md-3">Nome Completo</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="fname" placeholder="Clique para inserir">
-                                        </div>
-                                    </div>
-                                    <!--<div class="form-group">
-                                        <label for="lname" class="col-sm-3">Nome para futuro acesso</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="lname" placeholder="Ex. usuario.fulano">
-                                        </div>
-                                    </div>-->
-                                    <div class="form-group">
-                                        <label for="email1" class="col-md-3">Email</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="email1" placeholder="Usuario@algo.com">
-                                        </div>
-                                    </div>
-                                    <!--<div class="form-group">
-                                        <label for="senha" class="col-sm-3">Senha</label>
-                                        <div class="col-sm-3">
-                                            <input type="password" class="form-control" id="senha" placeholder="Clique para inserir">
-                                        </div>
-                                    </div>-->
-                                    <div class="form-group m-t-20">
-                                        <label>Data de Nascimento <small class="text-muted">dia/mês/ano</small></label>
-                                        <div class="col-sm-3">
-                                        <input type="text" class="form-control date-inputmask" id="date-mask" placeholder="Clique para inserir">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>CPF <small class="text-muted"> 999.999.999-99</small></label>
-                                        <div class="col-sm-3">
-                                        <input type="text" class="form-control cpf-inputmask" id="telefone" placeholder="Clique para inserir">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Número de Celular <small class="text-muted"> (99) 99999-9999</small></label>
-                                        <div class="col-sm-3">
-                                        <input type="text" class="form-control phone-inputmask" id="telefone" placeholder="Clique para inserir">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-3">Estado Civil</label>
-                                        <div class="col-md-9">
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" class="custom-control-input" id="solteiro" name="radio-stacked" required>
-                                                <label class="custom-control-label" for="solteiro">Solteiro</label>
+                                        <div class="form-row">
+                                            <div class="col-md-4 mb-3">
+                                                <label for="NomeCom">Nome Completo</label>
+                                                <input type="text" class="form-control name-inputmask" id="NomeCom" placeholder="Clique para inserir">
                                             </div>
-                                             <div class="custom-control custom-radio">
-                                                <input type="radio" class="custom-control-input" id="casado" name="radio-stacked" required>
-                                                <label class="custom-control-label" for="casado">Casado</label>
+                                            <div class="col-md-3 mb-3">
+                                                <label for="DataNasc">Data de Nascimento <small class="text-muted">dia/mês/ano</small></label>
+                                                <input type="text" class="form-control date-inputmask" id="DataNasc" placeholder="Clique para inserir">
                                             </div>
-                                             <div class="custom-control custom-radio">
-                                                <input type="radio" class="custom-control-input" id="divorciado" name="radio-stacked" required>
-                                                <label class="custom-control-label" for="divorciado">Divorciado</label>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="email1">Email</label>
+                                                <div class="col-sm-15">
+                                                <input type="text" class="form-control" id="email1" placeholder="Usuario@algo.com">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-3">Foto 3x4</label>
-                                        <div class="col-md-3">
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="foto" required>
-                                                <label class="custom-file-label" for="foto">upload da foto...</label>
-                                                <div class="invalid-feedback">Algo deu errado...</div>
+                                        <div class="form-row">
+                                            <div class="col-md-3 mb-3">
+                                                <label for ="cpf">CPF<small class="text-muted"> 999.999.999-99</small></label>
+                                                <input type="text" class="form-control cpf-inputmask" id="telefone" placeholder="Clique para inserir">
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <label for="telefone">Telefone <small class="text-muted"> (99) 99999-9999</small></label>
+                                                <input type="text" class="form-control phone-inputmask" id="telefone" placeholder="Clique para inserir">
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <label>Foto 3x4</label>
+                                                <div class="col-md-15">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="foto" required>
+                                                        <label class="custom-file-label" for="foto">Carregar foto...</label>
+                                                        <div class="invalid-feedback">Algo deu errado...</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-4 mb-3">
+                                                <label>Estado Civil</label>
+                                            <div class="col-md-5">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" id="solteiro" name="radio-stacked" required>
+                                                    <label class="custom-control-label" for="solteiro">Solteiro</label>
+                                                </div>
+                                                 <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" id="casado" name="radio-stacked" required>
+                                                    <label class="custom-control-label" for="casado">Casado</label>
+                                                </div>
+                                                 <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" id="divorciado" name="radio-stacked" required>
+                                                    <label class="custom-control-label" for="divorciado">Divorciado</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="cono1" class="col-md-3">Obs:</label>
+                                                    <div class="col-sm-15">
+                                                    <textarea class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="border-top">
+                                                <div class="card-body">
+                                                    <button   button type="submit" class="btn btn-success">Save</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="cono1" class="col-md-3">Obs:</label>
-                                        <div class="col-sm-3">
-                                            <textarea class="form-control"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="border-top">
-                                    <div class="card-body">
-                                        <button type="submit" class="btn btn-success">Salvar</button>
-                                    </div>
-                                </div>
+                                </class>
                             </form>
                         </div>
+                    </div>
+                </div>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -408,54 +398,54 @@
                 <!-- End Page wrapper  -->
                 <!-- ============================================================== -->
                 <footer class="footer text-center">
-                All Rights Reserved by Jose Alvaro. Designed and Developed by <a href="https://www.facebook.com/jose.alvaro.sf?ref=bookmarks">José Alvaro</a>.
-            </footer>
-        </div>
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
-    <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="../../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="../../assets/extra-libs/sparkline/sparkline.js"></script>
-    <!--Wave Effects -->
-    <script src="../../dist/js/waves.js"></script>
-    <!--Menu sidebar -->
-    <script src="../../dist/js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
-    <script src="../../dist/js/custom.min.js"></script>
-    <!-- This Page JS -->
-    <script src="../../assets/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
-    <script src="../../dist/js/pages/mask/mask.init.js"></script>
-    <script src="../../assets/libs/select2/dist/js/select2.full.min.js"></script>
-    <script src="../../assets/libs/select2/dist/js/select2.min.js"></script>
-    <script src="../../assets/libs/jquery-asColor/dist/jquery-asColor.min.js"></script>
-    <script src="../../assets/libs/jquery-asGradient/dist/jquery-asGradient.js"></script>
-    <script src="../../assets/libs/jquery-asColorPicker/dist/jquery-asColorPicker.min.js"></script>
-    <script src="../../assets/libs/jquery-minicolors/jquery.minicolors.min.js"></script>
-    <script src="../../assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-    <script src="../../assets/libs/quill/dist/quill.min.js"></script>
-    <script>
-        //***********************************//
-        // For select 2
-        //***********************************//
-        $(".select2").select2();
-        /*datwpicker*/
-        jQuery('.mydatepicker').datepicker();
-        jQuery('#datepicker-autoclose').datepicker({
-            autoclose: true,
-            todayHighlight: true
-        });
-        var quill = new Quill('#editor', {
-            theme: 'snow'
-        });
-
-    </script>
-</body>
+                Todos os direitos reservados por Jose Alvaro; Projetado e desenvolvido por 
+                <a href="https://www.facebook.com/jose.alvaro.sf?ref=bookmarks">José Alvaro</a>.
+                </footer>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Wrapper -->
+            <!-- ============================================================== -->
+            <!-- All Jquery -->
+            <!-- ============================================================== -->
+            <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
+            <!-- Bootstrap tether Core JavaScript -->
+            <script src="../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
+            <script src="../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+            <!-- slimscrollbar scrollbar JavaScript -->
+            <script src="../../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+            <script src="../../assets/extra-libs/sparkline/sparkline.js"></script>
+            <!--Wave Effects -->
+            <script src="../../dist/js/waves.js"></script>
+            <!--Menu sidebar -->
+            <script src="../../dist/js/sidebarmenu.js"></script>
+            <!--Custom JavaScript -->
+            <script src="../../dist/js/custom.min.js"></script>
+            <!-- This Page JS -->
+            <script src="../../assets/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+            <script src="../../dist/js/pages/mask/mask.init.js"></script>
+            <script src="../../assets/libs/select2/dist/js/select2.full.min.js"></script>
+            <script src="../../assets/libs/select2/dist/js/select2.min.js"></script>
+            <script src="../../assets/libs/jquery-asColor/dist/jquery-asColor.min.js"></script>
+            <script src="../../assets/libs/jquery-asGradient/dist/jquery-asGradient.js"></script>
+            <script src="../../assets/libs/jquery-asColorPicker/dist/jquery-asColorPicker.min.js"></script>
+            <script src="../../assets/libs/jquery-minicolors/jquery.minicolors.min.js"></script>
+            <script src="../../assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+            <script src="../../assets/libs/quill/dist/quill.min.js"></script>
+            <script>
+            //***********************************//
+            // For select 2
+            //***********************************//
+            $(".select2").select2();
+            /*datwpicker*/
+            jQuery('.mydatepicker').datepicker();
+            jQuery('#datepicker-autoclose').datepicker({
+                autoclose: true,
+                todayHighlight: true
+            });
+            var quill = new Quill('#editor', {
+                theme: 'snow'
+            });
+            </script>
+    </body>
 
 </html>
