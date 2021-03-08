@@ -9,14 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/favicon.png')}}">
     <title>AtosSistem - Sistema de Gestão para Igrejas</title>
     <!-- Custom CSS -->
-    <link href="../../assets/libs/jquery-steps/jquery.steps.css" rel="stylesheet">
-    <link href="../../assets/libs/jquery-steps/steps.css" rel="stylesheet">
-    <link href="../../dist/css/style.min.css" rel="stylesheet">
-    <link href="../../dist/css/style.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../../assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <link href="{{asset('assets/libs/jquery-steps/jquery.steps.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/libs/jquery-steps/steps.css')}}" rel="stylesheet">
+    <link href="{{asset('dist/css/style.min.css')}}" rel="stylesheet">
+    <link href="{{asset('dist/css/style.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -55,21 +55,21 @@
                         <b class="logo-icon p-l-10">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="../../assets/images/logo-icon.png" alt="homepage" class="light-logo" />
+                            <img src="{{asset('assets/images/logo-icon.png')}}" alt="homepage" class="light-logo" />
                            
                         </b>
                         <!--End Logo icon -->
                          <!-- Logo text -->
                         <span class="logo-text">
                              <!-- dark Logo text -->
-                             <img src="../../assets/images/logo-text.png" alt="homepage" class="light-logo" />
+                             <img src="{{asset('assets/images/logo-text.png')}}" alt="homepage" class="light-logo" />
                             
                         </span>
                         <!-- Logo icon -->
                         <!-- <b class="logo-icon"> -->
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <!-- <img src="../../assets/images/logo-text.png" alt="homepage" class="light-logo" /> -->
+                            <!-- <img src="{{asset('assets/images/logo-text.png')}}" alt="homepage" class="light-logo" /> -->
                             
                         <!-- </b> -->
                         <!--End Logo icon -->
@@ -198,7 +198,7 @@
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('assets/images/users/1.jpg')}}" alt="user" class="rounded-circle" width="31"></a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
@@ -298,13 +298,13 @@
                 <!-- ============================================================== -->
                 <div class="card">
                     <div class="card-body wizard-content">
-                        <h4 class="card-title">Informações Pessoais</h4>
+                        <h4 class="card-title">Informações</h4>
                         <p>(*) Obrigatoriedade</p>
                         <h6 class="card-subtitle"></h6>
                         <form id="cadastro" action="#" class="m-t-40" method="post">
                             <div>
                                 <!-- required -->
-                                <h3>Profile</h3>
+                                <h3>Informações Pessoais</h3>
                                 <section>
                                     <div class="col-12">
                                         <div class="row">
@@ -324,7 +324,7 @@
                                                 <input id="foto" type="file" class="custom-file-input">
                                             </div>
                                             <div class="col-4">
-                                                    <label for="data-nascimento">Data de Nascimento</label>
+                                                    <label for="data-nascimento">Data de Nascimento:</label>
                                                     <div class="input-group">
                                                         <input type="text" class="form-control mydatepicker" id="data-nascimento">
                                                         <div class="input-group-append">
@@ -332,6 +332,14 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="col-3">
+                                                <label for="Naturalidade">Naturalidade:</label>
+                                                <input id="Naturalidade" name="Naturalidade" type="text" class=" form-control">
+                                            </div>
+                                            <div class="col-4">
+                                                <label for="rg">RG:</label>
+                                                <input id="rg" name="rg" type="text" class=" form-control">
+                                            </div>
                                             <div class="col-4">
                                                 <label for="endereco">Endereço:</label>
                                                 <input id="endereco" name="endereco" type="text" class=" form-control">
@@ -340,19 +348,36 @@
                                                 <label for="numero">Número:</label>
                                                 <input id="numero" name="numero" type="text" class=" form-control">
                                             </div>
-                                            <!-- <div class="col-2">
+                                            <div class="col-2">
+                                                <label for="bairro">Bairro:</label>
+                                                <input id="bairro" name="bairro" type="text" class=" form-control">
+                                            </div>
+                                            <div class="col-3">
                                                 <label for="complemento">Complemento:</label>
                                                 <input id="complemento" name="complemento" type="text" class=" form-control">
-                                            </div> -->
+                                            </div>
+                                            <div class="col-4">
+                                                <label for="cidade">Cidade:</label>
+                                                <input id="cidade" name="cidade" type="text" class=" form-control">
+                                            </div>
                                             <div class="col-4">
                                                 <label for="cep">CEP:</label>
                                                 <input id="cep" name="cep" type="text" class=" form-control">
                                             </div>
-                                            <div class="col-4">
+                                            <div class="col-2">
                                                 <label for="uf">UF:</label>
                                                 <input id="uf" name="uf" type="text" class=" form-control">
                                             </div>
                                         </div>
+                                    <div class="col-3">
+                                    <label>Sexo</label>
+                                        <select class="select2 form-control custom-select">
+                                            <optgroup label="Sexo">
+                                                <option value="M">Masculino</option>
+                                                <option value="F">Feminino</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
                                     </div>   
                                 </section>
                                 <h3>Hints</h3>
@@ -442,25 +467,25 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="{{asset('assets/libs/jquery/dist/jquery.min.js')}}"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="{{asset('assets/libs/popper.js/dist/umd/popper.min.js')}}"></script>
+    <script src="{{asset('assets/libs/bootstrap/dist/js/bootstrap.min.js')}}"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="../../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="../../assets/extra-libs/sparkline/sparkline.js"></script>
+    <script src="{{asset('assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js')}}"></script>
+    <script src="{{asset('assets/extra-libs/sparkline/sparkline.js')}}"></script>
     <!-- Wave Effects -->
-    <script src="../../dist/js/waves.js"></script>
+    <script src="{{asset('dist/js/waves.js')}}"></script>
     <!-- Menu sidebar -->
-    <script src="../../dist/js/sidebarmenu.js"></script>
+    <script src="{{asset('dist/js/sidebarmenu.js')}}"></script>
     <!-- Custom JavaScript -->
-    <script src="../../dist/js/custom.min.js"></script>
+    <script src="{{asset('dist/js/custom.min.js')}}"></script>
     <!-- this page js -->
-    <script src="../../assets/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
-    <script src="../../dist/js/pages/mask/mask.init.js"></script>
-    <script src="../../assets/libs/jquery-steps/build/jquery.steps.min.js"></script>
-    <script src="../../assets/libs/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="../../assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="{{asset('assets/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js')}}"></script>
+    <script src="{{asset('dist/js/pages/mask/mask.init.js')}}"></script>
+    <script src="{{asset('assets/libs/jquery-steps/build/jquery.steps.min.js')}}"></script>
+    <script src="{{asset('assets/libs/jquery-validation/dist/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')}}"></script>
     <script>
     // com forma
     var form = $("#cadastro");
