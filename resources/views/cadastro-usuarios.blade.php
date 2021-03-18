@@ -419,7 +419,7 @@
                                         <textarea class="form-control"></textarea>
                                     </div>                                              
                                 </section>
-                                <h3>Account</h3>
+                                <!-- <h3>Account</h3>
                                 <section>
                                     <label for="userName">User name </label>
                                     <input id="userName" name="userName" type="text" class=" form-control">
@@ -427,7 +427,7 @@
                                     <input id="password" name="password" type="text" class=" form-control">
                                     <label for="confirm">Confirm Password </label>
                                     <input id="confirm" name="confirm" type="text" class=" form-control">
-                                </section>
+                                </section> -->
                             </div>
                         </form>
                     </div>
